@@ -109,16 +109,121 @@
 # print(msg)
 
 #---------------------------------------------------------
-lol = 'sp\xc4m'
-print(lol)
+# lol = 'sp\xc4m'
+# print(lol)
+
+# lol = b'a\x01c'
+# print(lol)
+
+# lol = u'sp\u00c4m'
+# print(lol)
+
+# print('spam')
+# print('spam'.encode('utf8'))
+# print('spam'.encode('utf16'))
+
+# lol = '\u00A3', '\u00A3'.encode('latin1'), b'\xA3'.decode('latin1')
+# print(lol)
 
 
+# lol = u'x'.encode() + b'y'
+# lol = u'x' + b'y'.decode()
+# # lol = u'x' + b'y' //ошибка
+# print(lol)
+#--------------------------------------------------
+
+# import re
+# math = re.match('Hello[\t]*(.*)world', 'Hello Python world')
+# print(math.group(1))
+
+# math = re.match('[/:](.*)[/:](.*)[/:](.*)', '/usr/home/:lumberjack')
+# print(math.group())
+# print(re.split('[/:]', '/usr/home/lumberjack'))
+
+#---------------------------------------------------
+
+# L = [123, 'spam', 1.23]
+# print(len(L))
+
+# # print(L[0])
+# # print(L[:-1])
+# # print(L + [4, 5, 6])
+# # print(L * 2)
+# # print(L)
+# # L += [4, 5, 6]
+# # print(L)
+
+# L.append('NT')
+# print(L)
+# print(L.pop(2))
+# print(L)
+
+# M = ['bb', 'aa', 'cc']
+# M.sort()
+# print(M)
+
+# M.reverse()
+# print(M)
+
+#-------------------------------------------------------
+M = [[1,2,3], [4,5,6], [7,8,9]]
+# print(M)
+# print(M[1])
+# print(M[1][2])
+
+# col2 = [row[1] for row in M]
+# print(col2)
+# print(M[1])
+# print(M)
+# col2 = [row[1] + 2 for row in M]
+# print(col2)
+# col2 = [row[1]  for row in M if row[1] % 2 == 0]
+# print(col2)
+
+# diag = [M[i][i] for i in [0,1,2]]
+# print(diag)
+
+# doubles = [c * 2 for c in 'spam']
+# print(doubles)
+
+# print(list(range(4)))
+# print(list(range(-6, 7, 2)))
+# print([[x ** 2, x ** 3] for x in range(4)])
+# print([[x, x / 2, x * 2] for x in range(-6, 7, 2) if x > 0])
+
+# G = (sum(row) for row in M)
+# print(next(G))
+# print(next(G))
+# print(next(G))
+
+# print(list(map(sum, M)))
+
+# print({sum(row) for row in M})
+# print({i : sum(M[i]) for i in range(3)})
+
+# print([ord(x) for x in 'spaam'])
+# print({ord(x) for x in 'spaam'})
+# print({x : ord(x) for x in 'spaam'})
+# print((ord(x) for x in 'spaam'))
 
 
+# print(type([x for x in 'abc']))
+# print(type({x for x in 'abc'}))
+# print(type({x: ord(x) for x in 'abc'}))
+# print(type((x for x in 'abc')))
 
+#--------------------------------------------------
+# D = {'food': 'Spam', 'quantity': 4, 'color': 'pink'}
+# print(D['food'])
+# D['quantity'] += 1
+# print(D)
 
-
-
+D = {}
+D['name'] = 'Bob'
+D['job'] = 'dev'
+D['age'] = 40
+print(D)
+print(D['name'])
 
 
 
