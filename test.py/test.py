@@ -218,14 +218,231 @@ M = [[1,2,3], [4,5,6], [7,8,9]]
 # D['quantity'] += 1
 # print(D)
 
-D = {}
-D['name'] = 'Bob'
-D['job'] = 'dev'
-D['age'] = 40
-print(D)
-print(D['name'])
+# D = {}
+# D['name'] = 'Bob'
+# D['job'] = 'dev'
+# D['age'] = 40
+# print(D)
+# print(D['name'])
 
 
+# bob1 = dict(name = 'Bob', job = 'dev', age = 40, aname1 = 'Bob1', ajob2 = 'dev2', age3 = 403)
+# print(bob1)
 
+# bob2 = dict(zip(['name', 'job', 'age'], ['Bob', 'dev', 40]))
+# print(bob2)
+
+#так как у меня версия новая, у меня добавляется по порядку добавления элементов
+
+# rec = {'name': {'first': 'Bob', 'last': 'Smith'},
+#         'jobs': ['dev', 'mgr'],
+#         'age': 40.5}
+# print(rec['name'])
+# print(rec['name']['last'])
+# print(rec['jobs'])
+# print(rec['jobs'][-1])
+# rec['jobs'].append('janitor')
+# print(rec)
+
+#--------------------------------------------------------------------
+# D = {'a' : 1, 'c' : 2, 'b' : 3}
+# print(D)
+
+# D['e'] = 99
+# print(D)
+
+# #D['f'] - ошибка
+
+# print('f' in D)
+
+# if not 'f' in D:
+#     print('missing')
+
+# if 'f' in D:
+#     print('missing')
+#     print('no, really ...') 
+# print('hehe')
+
+
+# value = D.get('x', 0)
+# print(value)
+# D['x'] = 100
+# value = D['x'] if 'x' in D else 0
+# print(value)
+
+# Ks = list(D.keys())
+# print(Ks)
+
+# Ks.sort()
+# print(Ks)
+
+# for key in Ks:
+#     print(key, '=>' , D[key])
+
+# for key in sorted(D):
+#     print(key, '=>', D[key])
+
+#-------------------------------------------------------
+# for c in 'spam':
+#     print(c.upper())
+
+# x = 5
+# while x > 0:
+#     print('spam!' * x)
+#     x -= 1
+
+# squares = [x **  2 for x in [1, 2, 3, 4, 5]]
+# print(squares)
+
+# squares = []
+# for x in [1,2,3,4,5]:
+#     squares.append(x ** 2)
+# print(squares)
+
+#-----------------------------------------------------
+
+# T = (1, 2, 3, 4)
+# print(len(T))
+# print(T + (5, 6))
+# print(T[0])
+# print(T.index(4))
+# print(T.count(4))
+
+# #T[0] = 2 //ошибка кортежи нельзя менять
+# T = (2,) + T[1:]
+# print(T)
+
+# T = 'spam', 3.0, [11, 22, 33]
+# print(T[1])
+# print(T[2][1])
+
+# #T.append(4) //ошибка нет атрибута и по сути это изменение 
+
+#---------------------------------------------------------------
+# f = open('data.txt', 'w')
+# f.write('hello\n')
+# f.write('world\n')
+# f.close()
+
+# f = open('data.txt')
+# text = f.read()
+# print(text)
+# print(text.split())
+# f.close()
+
+# for line in open('data.txt'): print(line)
+
+# print(dir(f))
+
+# import struct
+# packed = struct.pack('i4sh', 7, b'spam', 8)
+# print(packed)
+
+# file = open('data.bin', 'wb')
+# print(file.write(packed))
+# file.close()
+
+# data = open('data.bin', 'rb').read()
+# print(data)
+# print(data[4 : 8])
+# print(list(data))
+# print(struct.unpack('>i4sh', data))
+
+#-------------------------------------------------
+# S = 'sp\xc4m'
+# print(S)
+# print(S[2])
+
+# file = open('unidata.txt', 'w', encoding='utf-8')
+# print(file.write(S))
+# file.close()
+# text = open('unidata.txt', encoding='utf-8').read()
+# print(text)
+# print(len(text))
+
+# raw = open('unidata.txt', 'rb').read()
+# print(raw)
+# print(len(raw))
+
+# print(text.encode('utf-8'))
+# print(text.encode('utf-16'))
+# print(len(text.encode('latin-1')), len(text.encode('utf-16')))
+# print(b'\xff\xfes\x00p\x00\xc4\x00m\x00'.decode('utf-16'))
+# file.close()
+
+# import codecs
+# print(codecs.open('unidata.txt', encoding='utf8').read())
+# print(open('unidata.txt', 'rb').read())
+# print(open('unidata.txt').read())
+
+#--------------------------
+
+# X = set('spam')
+# Y = {'h', 'a', 'm'}
+
+# print(X, Y)
+# print(X & Y)
+# print(X | Y)
+# print(X - Y)
+# print(X > Y)
+# print([n ** 2 for n in [1, 2, 3, 4]])
+# print({n ** 2 for n in [1, 2, 3, 4]})
+
+# print(list(set([1,2,1,3,1])))
+# print(set('spam') - set('ham'))
+# print(set('spam') == set('asmp'))
+
+# print('p' in set('spam'), 'p' in 'spam', 'ham' in['eggs', 'spam', 'ham'])
+
+# print(1/3)
+# print((2/3) + (1/2))
+# import decimal
+# d = decimal.Decimal('3.141')
+# print(d+1)
+# decimal.getcontext().prec = 2
+# print(decimal.Decimal('1.00') / decimal.Decimal('3.00'))
+# from fractions import Fraction
+# f = Fraction(2, 3)
+# print(f + 1)
+# print(f + Fraction(1, 2))
+# print(1>2, 1<2)
+# print(bool('spam'))
+# X = None
+# print(X)
+# L = [None] * 100
+# print(L)
+
+#---------------------------------------------------------------
+# L = [None] * 100
+# print(type(L))
+# print(type(type(L)))
+
+# if type(L) == type([]):
+#         print('yes')
+# else:
+#         print('no')
+# if type(L) == list:
+#     print('yes')
+
+#-------------------------------------------------------------
+
+class Worker:
+        def __init__(self, name, pay):            #инициализировать при создании
+            self.name = name                    #новый обхект 
+            self.pay = pay
+        def lastName(self):
+                return self.name.split()[-1]       #разбить строку по проблеам
+        def giveRaise(self, percent):
+               self.pay *= (1.0 + percent)          #обновить pay на месте
+
+bob = Worker('Bob Smith', 50000)
+sue = Worker('Sue Jones', 60000)
+
+print(bob.lastName())
+print(sue.lastName())
+
+print(sue.giveRaise(.10))
+print(sue.pay)
+print(sue.name)
 
 
