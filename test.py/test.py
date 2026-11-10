@@ -426,23 +426,312 @@ M = [[1,2,3], [4,5,6], [7,8,9]]
 
 #-------------------------------------------------------------
 
-class Worker:
-        def __init__(self, name, pay):            #инициализировать при создании
-            self.name = name                    #новый обхект 
-            self.pay = pay
-        def lastName(self):
-                return self.name.split()[-1]       #разбить строку по проблеам
-        def giveRaise(self, percent):
-               self.pay *= (1.0 + percent)          #обновить pay на месте
+# class Worker:
+#         def __init__(self, name, pay):            #инициализировать при создании
+#             self.name = name                    #новый обхект 
+#             self.pay = pay
+#         def lastName(self):
+#                 return self.name.split()[-1]       #разбить строку по проблеам
+#         def giveRaise(self, percent):
+#                self.pay *= (1.0 + percent)          #обновить pay на месте
 
-bob = Worker('Bob Smith', 50000)
-sue = Worker('Sue Jones', 60000)
+# bob = Worker('Bob Smith', 50000)
+# sue = Worker('Sue Jones', 60000)
 
-print(bob.lastName())
-print(sue.lastName())
+# print(bob.lastName())
+# print(sue.lastName())
 
-print(sue.giveRaise(.10))
-print(sue.pay)
-print(sue.name)
+# print(sue.giveRaise(.10))
+# print(sue.pay)
+# print(sue.name)
+
+#--------------------------------------------------------------
+#Chapter 5
+# y = 10
+# x = 10.0
+# print(y <= x)
+
+a = 3   #имя создается не объявляется заранее
+b = 4
+
+# print(a + 1, a - 1)
+# print(b * 3, b / 2)
+# print(a % 2, b ** 2)
+# print(2 + 4.0, 2.0 ** b)
+# print(b / 2 + a)
+# print(b / (2.0 + a))
+
+# print(1 / 2.0)
+# num = 1 / 3.0
+# print(num)
+# print('%e' % num)
+# print('%4.2f' % num)
+# print('{0:4.2f}'.format(num))
+
+# repr('spam')
+# print('spam')
+
+#---------------------------------------------------------
+
+# print(1 < 2)
+# print(2.0 >= 1)
+# print(2.0 == 2.0)
+# print(2.0 != 2.0)
+
+# X = 2
+# Y = 4
+# Z = 6
+
+# print(X < Y < Z)
+# print(X < Y and Y < Z)
+# print(X < Y > Z)
+# print(X < Y and Y > Z)
+# print(1 < 2 < 3.0 < 4)
+# print(1 > 2 > 3.0 > 4)
+
+# print(1 == 2 < 3) #то же что и 1 == 2 and 2 < 3
+# print(1.1 + 2.2 == 3.3)
+# print(1.1 + 2.2)
+# print((int)(1.1 + 2.2) == (int)(3.3))
+
+# X = Y // Z
+# print(X)
+# X = Y / float(Z)
+# print(X)
+
+# from__future__iport division #Делает доступным поведение / из Python З.Х
+# import math
+# print(math.floor(2.5))
+# print(math.floor(-2.5))
+# print(math.trunc(2.5))
+# print(math.trunc(-2.5))
+
+# print(5 / 2, 5 / -2)
+# print(5 // 2, 5 // -2)
+# print(5 / 2.0, 5 / -2.0)
+# print(5 // 2.0 , 5 // -2.0)
 
 
+# import math
+# print(5 / -2)
+# print(5 // -2)
+# print(math.trunc(5 / -2))
+
+
+# print((5 / 2), (5 / 2.0), (5 / -2.0), (5 / -2))
+# print((5 // 2), (5 // 2.0), (5 // -2.0), (5 // -2))
+# print((9 / 3), (9 / 3.0), (9 // 3), (9 // 3.0))
+
+#-------------------------------------------------------------
+
+
+# print(0o1, 0o20, 0o377)
+# print(0x01, 0x10, 0xFF)
+# print(0b1, 0b10000, 0b11111111)
+
+# print(0xFF, (15 * (16 ** 1)) + 15 * (16 ** 0))
+# print(0x2F, (2 * (16 ** 1)) + (15 * (16 ** 0)))
+# print(0xF, 0b1111, (1 * (2 ** 3) + 1 * (2 ** 2) + 1 * (2 ** 1) + 1 * (2 ** 0)))
+
+# print(oct(64), hex(64), bin(64))
+
+# print(64, 0o100, 0x40, 0b1000000)
+# print(int('64'), int('100', 8), int('40', 16), int('1000000', 2))
+# print(int('0x40', 16), int('0b1000000', 2))
+# print(int('100', 10))
+
+# print('{0:o}, {1:x}, {2:b}'.format(64, 64, 64))
+# print('%o, %x, %x, %X,' % (64, 64, 255, 255))
+# print(0o1, 0o20, 0o377)
+
+# x = 1
+# print(x << 2)
+# print(x | 2)
+# print(x & 1)
+
+# X = 0b0001
+# print(X << 2)
+# print(bin(X << 2))
+# print(bin(X | 0b010))
+# print(bin(X & 0b1))
+
+# X = 0xFF
+# print(bin(X))
+# print(X ^ 0b10101010)
+# print(bin(X ^ 0b10101010))
+# print(int('01010101', 2))
+# print(hex(85))
+
+# X = 99
+# print(bin(X), X.bit_length(), len(bin(X)) - 2)
+# print(bin(256), (256).bit_length(), len(bin(256)) - 2)
+
+#-------------------------------------------------------------
+# import math
+# print(math.pi, math.e)
+# print(math.sin(2 * math.pi / 180))
+# print(math.sqrt(144), math.sqrt(2))
+# print(pow(2, 4), 2 ** 4, 2.0 ** 4.0)
+# print(abs(-42.0), sum((1, 2, 3, 4)))
+# print(min(3, 1, 2, 4), max(3, 1, 2 ,4))
+# print(math.floor(2.567), math.floor(-2.567))
+# print(math.trunc(2.567), math.trunc(-2.567))
+# print(int(2.257), int(-2.567))
+# print(round(2.567), round(2.467), round(2.567, 2))
+# print('%.1f' %2.567, '{0:.2f}'.format(2.567))
+
+# print((1 / 3.0), round(1 / 3.0, 3), ('%.2f' % (1 / 3.0)))
+
+# import math
+# print(math.sqrt(144))
+# print(144 ** .5)
+# print(pow(144, .5))
+# print(math.sqrt(1234567890))
+# print(1234567890 ** 0.5)
+# print(pow(1234567890, .5))
+
+# import random
+# # print(random.random())
+# # print(random.random())
+
+# # print(random.randint(1, 10))
+# # print(random.randint(1, 10))
+
+# print(random.choice(['Life of Brian', 'Holy Grail', 'Meaning of life']))
+# print(random.choice(['Life of Brian', 'Holy Grail', 'Meaning of life']))
+
+# suits = ['hearts', 'clubs', 'diamonds', 'spades']
+# random.shuffle(suits)
+# print(suits)
+# random.shuffle(suits)
+# print(suits)
+
+#------------------------------
+# print(0.1 + 0.1 + 0.1 - 0.3)
+
+# from decimal import Decimal
+# print(Decimal('0.1') + Decimal('0.1') + Decimal('0.1') - Decimal('0.3'))
+
+# import decimal
+# print(decimal.Decimal(1) / decimal.Decimal(7))
+# decimal.getcontext().prec = 4
+# print(decimal.Decimal(1) / decimal.Decimal(7))
+# print(decimal.Decimal(0.1) + decimal.Decimal(0.1) + decimal.Decimal(0.1) - decimal.Decimal(0.3))
+
+# print(1999 + 1.33)
+# decimal.getcontext().prec = 2
+# pay = decimal.Decimal(str(1999 + 1.33))
+# print(pay)
+
+# import decimal
+# print(decimal.Decimal('1.00') / decimal.Decimal('3.00'))
+
+# with decimal.localcontext() as ctx:
+#     ctx.prec = 2
+#     print(decimal.Decimal('1.00') / decimal.Decimal('3.00'))
+# print(decimal.Decimal('1.00') / decimal.Decimal('3.00'))
+
+# from fractions import Fraction
+# x = Fraction(1, 3)
+# y = Fraction(4, 6)
+
+# print(x)
+# print(y)
+
+# print(x + y)
+# print(x - y)
+# print(x * y)
+
+# print(Fraction('.25'))
+# print(Fraction('1.25'))
+# print(Fraction('.25') + Fraction('1.25'))
+
+# a = 1 / 3.0
+# b = 4 / 6.0
+# print(a)
+# print(b)
+# print(a + b)
+# print(a - b)
+# print(a * b)
+
+# print(0.1 + 0.1 + 0.1 - 0.3)
+# from fractions import Fraction
+# print(Fraction(1, 10) + Fraction(1, 10) + Fraction(1 , 10) - Fraction(3, 10))
+
+# from decimal import Decimal
+# # print(Decimal('0.1') + Decimal('0.1') + Decimal('0.1') - Decimal('0.3'))
+
+# # print(1 / 3)
+# # print(Fraction(1, 3))
+
+# # import decimal
+# # decimal.getcontext().prec = 2
+# # print(Decimal(1) / Decimal(3))
+
+# # print((1 / 3) + (6 / 12))
+# # print(Fraction(6, 12))
+# # print(Fraction(1, 3) + Fraction(6, 12))
+
+# # decimal.Decimal(str(1/3)) + decimal.Decimal(str(6/12))
+
+# # print(1000.0 / 1234567890)
+# # print(Fraction(1000, 1234567890))
+
+# x = Fraction(1, 3)
+# print(2.5.as_integer_ratio())
+# f = 2.5
+# z = Fraction(*f.as_integer_ratio())
+# print(z)
+# print(x)
+# print(x + z)
+# print(float(x))
+# print(float(z))
+# print(float(x+z))
+# print(17 / 6)
+# print(Fraction.from_float(1.75))
+# print(Fraction(*(1.75).as_integer_ratio()))
+
+# print(x)
+# print(x + 2)
+# print(x + 2.0)
+# print(x + (1./3))
+# print(x + (4./3))
+# print(x + Fraction(4, 3))
+
+# print(4.0 / 3)
+# print((4.0 / 3).as_integer_ratio())
+# print(x)
+# a = x + Fraction(*(4.0 / 3).as_integer_ratio())
+# print(a)
+# print(22517998136852479 / 13510798882111488.) 
+# print(a.limit_denominator(10))
+
+#-----------------------------------------------
+
+x = set('abcde')
+y = set('bdxyz')
+
+print(x)
+print(x - y)
+print(x | y)
+print(x & y)
+print(x ^ y)
+print(x > y, x < y)
+
+print('e' in x)
+print('e' in 'Camelot', 22 in [11,22,33])
+
+z = x.intersection(y)
+print(z)
+z.update(set(['X', 'Y']))
+print(z)
+z.remove('b')
+print(z)
+
+for item in set('abc') : print(item * 3)
+
+S = set([1, 2, 3])
+# print(S | set([3, 4]))
+print(S.union([3, 4]))
+print(S.intersection((1, 3, 5)))
+print(S.issubset(range(-5, 5)))
