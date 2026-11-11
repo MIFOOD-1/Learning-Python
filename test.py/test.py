@@ -708,30 +708,126 @@ b = 4
 
 #-----------------------------------------------
 
-x = set('abcde')
-y = set('bdxyz')
+# x = set('abcde')
+# y = set('bdxyz')
 
-print(x)
-print(x - y)
-print(x | y)
-print(x & y)
-print(x ^ y)
-print(x > y, x < y)
+# print(x)
+# print(x - y)
+# print(x | y)
+# print(x & y)
+# print(x ^ y)
+# print(x > y, x < y)
 
-print('e' in x)
-print('e' in 'Camelot', 22 in [11,22,33])
+# print('e' in x)
+# print('e' in 'Camelot', 22 in [11,22,33])
 
-z = x.intersection(y)
-print(z)
-z.update(set(['X', 'Y']))
-print(z)
-z.remove('b')
-print(z)
+# z = x.intersection(y)
+# print(z)
+# z.update(set(['X', 'Y']))
+# print(z)
+# z.remove('b')
+# print(z)
 
-for item in set('abc') : print(item * 3)
+# for item in set('abc') : print(item * 3)
 
-S = set([1, 2, 3])
-# print(S | set([3, 4]))
-print(S.union([3, 4]))
-print(S.intersection((1, 3, 5)))
-print(S.issubset(range(-5, 5)))
+# S = set([1, 2, 3])
+# # print(S | set([3, 4]))
+# print(S.union([3, 4]))
+# print(S.intersection((1, 3, 5)))
+# print(S.issubset(range(-5, 5)))
+
+#-----------------------------------
+
+# set([1, 2, 3, 4])       #вызов во всей версии
+# {1, 2, 3, 4}            #вызов в новых версиях с 2.7 и т.д
+
+# print(set([1, 2, 3, 4]))
+# print(set('spam'))
+# print({1, 2, 3, 4})
+# S = {'s', 'p', 'a', 'm'}
+# print(S)
+# S.add('alot')
+# print(S)
+
+# S1 = {1, 2, 3, 4}
+# print(S1 & {1, 3})
+# print({1, 5, 3, 6} | S1)
+# print(S1 - {1, 3, 4})
+# print(S1 > {1, 3}) 
+
+# print(S1 - {1, 2, 3, 4})
+# print(type({}))
+# S = set()
+# S.add(1.23)
+# print(S)
+
+# print({1, 2, 3}.union([3, 4]))
+# print({1, 2, 3}.union({3, 4}))
+# print({1, 2, 3}.union(set([3, 4])))
+# print({1, 2, 3}.intersection((1, 3, 5)))
+# print({1, 2, 3}.issubset(range(-5, 5)))
+
+# print(S)
+# #print(S.add([1, 2, 3]))     #ошибка нелья, во множество работают только неизменяемые объекты
+# #print(S.add({'a' : 1}))     #ошиька таже, тип нехешируемый
+# print(S.add((1, 2, 3)))     # норм так как эт кортеж
+# print(S)
+# print(S | {(4, 5, 6), (1, 2, 3)})
+# print((1, 2, 3) in S)
+# print((1, 4, 3) in S)
+
+# print({x ** 2 for x in [1, 2, 3, 4]})
+# print({x for x in 'spam'})
+# print({c * 4 for c in 'spam'})
+# print({c * 4 for c in 'spamham'})
+# S = {c * 4 for c in 'spam'}
+# print(S)
+# print(S | {'mmmm', 'xxxx'})
+# print(S & {'mmmm', 'xxxx'})
+
+# L = [1, 2, 1, 3, 2, 4, 5]
+# print(set(L))
+# L = list(set(L))
+# print(L)
+# print(list(set(['yy', 'cc', 'aa', 'xx', 'dd', 'aa'])))
+
+# print(set([1, 3, 5, 7]) - set([1, 2, 4, 5, 6]))
+# print(set('abcdefg') - set('abdghij'))
+# print(set('spam') - set(['h', 'a', 'm']))
+# print(set('spam') - set('ham'))
+
+# print(set(dir(bytes)) - set(dir(bytearray)))
+# print(set(dir(bytearray)) - set(dir(bytes)))
+
+# L1, L2 = [1, 3, 5, 2, 4], [2, 5, 3, 4, 1]
+# print(L1 == L2)
+
+# print(set(L1) == set(L2))
+# print(sorted(L1) == sorted(L2))
+
+# print('spam' == 'asmp', set('spam') == set('asmp'), sorted('spam') == sorted('asmp'))
+
+# enginers = {'bob', 'sue', 'ann', 'vic'}
+# managers = {'tom', 'sue'}
+# print('bob' in enginers)
+# print(enginers & managers)
+# print(enginers | managers)
+# print(enginers - managers)
+# print(managers - enginers)
+# print(managers > enginers)
+# print({'bob', 'sue'} < enginers)
+# print(managers | enginers > managers)
+# print(managers ^ enginers)
+# print((managers | enginers) - (managers ^ enginers))
+
+#-------------------------------------------------------------
+print(type(True))
+print(isinstance(True, int))
+print(True == 1)
+print(True == -1)
+print(True == 2)
+print(True is 1)
+print(True or False)
+print(True + 4)
+
+
