@@ -821,13 +821,177 @@ b = 4
 # print((managers | enginers) - (managers ^ enginers))
 
 #-------------------------------------------------------------
-print(type(True))
-print(isinstance(True, int))
-print(True == 1)
-print(True == -1)
-print(True == 2)
-print(True is 1)
-print(True or False)
-print(True + 4)
+# print(type(True))
+# print(isinstance(True, int))
+# print(True == 1)
+# print(True == -1)
+# print(True == 2)
+# print(True is 1)
+# print(True or False)
+# print(True + 4)
+
+#---------------------------------------------------------------------------
+
+# L1 = [2, 3, 4]
+# L2 = L1
+# L1[0] = 24
+# print(L1) #[24, 3, 4]
+# print(L2) #[24, 3, 4]
+
+# L1 = [2, 3, 4]
+# L2 = L1[:]
+# L1[0] = 24
+# print(L1) #[24, 3, 4]
+# print(L2) #[2, 3, 4]
 
 
+# import сору
+# X = copy.copy(Y)          #Создать "поверхностную" копию верхнего уровня
+                            # любого объекта Y
+# X = сору.deepcopy(Y)      # Создать глубокую копию любого объек
+
+# L = [1, 2, 3]
+# M = L                   #М и L ссылаются на один и тот же объект
+# print(L == M)           #Одинаковые значения
+# print(L is M)           #Одинаковые объекты
+
+
+# L = [1, 2, 3]
+# M = [1, 2, 3]           #М и L ссылаются на один и тот же объект
+# print(L == M)           #Одинаковые значения
+# print(L is M)           #Разные бъекты        
+
+# X = 42
+# Y = 42
+# print(X == Y)
+# print(X is Y)
+
+# import sys
+# print(sys.getrefcount (1))
+
+
+#-------------------------------------------------------------------------------------------------
+
+# print("shrubbery", 'shrubbery')
+
+# print('knights"s', "knight's")
+# print('knights\'s', "knight\"s")
+
+# title = "Meaning " 'of' " Life"     #неявно 
+# print(title)
+
+# title = "Meaning", 'of'," Life"     #явно 
+# print(title)
+
+# print("Meaning", 'of',"Life")
+
+# s = 'a\nb\tc'
+# print(s)
+# print(len(s))
+
+# s = 'a\0b\0c'
+# print(s)
+# print(len(s))
+
+# s = '\001\002\x03'
+# print(s)
+# print(len(s))
+
+# S = "s\tp\na\x00m"
+# print(S)
+# print(len(S))
+
+# x = "C:\py\code"
+# x
+# print(len)
+
+
+# myfile = open('C:\new\text.dat', 'w') #проблема из форматирования \ используется для символом избежание этого ниже
+# myfile = open(r'C:\new\text.dat', 'w') #проблема решена так r, убирает форматирования, из за чего \ так и читается
+# myfile = open('C:\\new\\text.dat', 'w') # альтенатива ставить \\, так будет читаться как одна \
+
+# mantra = """Always look
+# on the bright
+# side of life.
+# """
+# print(mantra)
+
+# mantra = "lol\n" \
+# "lel\n" \
+# " hjahahh"
+# print(mantra)
+
+# menu = """span      #комментраии здесь добалвяются к строке
+# eggs                #тоже самое
+# """
+# print(menu)
+
+# menu = (
+#     "spam\n"           #коммент ыигнорируется 
+#     "eggs\n"            #но символы новой строки не являются автоматическими, покажется как есть в интерактивном запуске, а так нет
+# )
+# print(menu)
+
+# X = 1
+# """
+# import os
+# print(os.getcws())
+# """
+# Y = 2
+
+# print(len('abc'))
+# print('abc' + 'def')
+# print('Ni!' * 4)
+
+# myjob = "hacker"
+# for c in myjob: print(c, end=' ')
+
+# print("k" in myjob)
+# print("z" in myjob)
+# print('spam' in 'abcspamdef')
+
+# S = 'spam'
+# print(S[0], S[-2])
+# print(S[1:3], S[1:], S[:-1] )
+# print(S[0: ])
+
+# S = 'abcdefghijklmnop'
+# print(S[1:10:2])
+# print(S[::2])
+# S = 'hello'
+# print(S[::-1])
+# S = 'abcedfg'
+# print(S[5:1:-1])
+
+# print('spam'[1:3])
+# print('spam'[slice(1,3)])
+# print('spam'[::-1])
+# print('spam'[slice(None,None, -1)])
+
+# S = "42"
+# I = 1
+# print(S + str(I))
+# print(int(S) + I)
+# print(str(3.1415), float("1.5"))
+
+# print(ord('s'))
+# print(chr(115))
+
+# S = '5'
+# S = chr(ord(S) + 1)
+# print(S)
+# S = chr(ord(S) + 1)
+# print(S)
+
+# S = 'spam'
+# S = S + 'SPAM!'
+# print(S)
+# S = S[:4] + 'Burger' + S[-1]
+# print(S)
+
+# S = 'splot'
+# S = S.replace('pl', 'pamal')
+# print(S)
+
+print('That is %d %s bird!' % (1, 'dead'))
+print('That is {0}{1} bird!'.format(1, 'dead'))
