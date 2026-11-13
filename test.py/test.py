@@ -166,7 +166,7 @@
 # print(M)
 
 #-------------------------------------------------------
-M = [[1,2,3], [4,5,6], [7,8,9]]
+# M = [[1,2,3], [4,5,6], [7,8,9]]
 # print(M)
 # print(M[1])
 # print(M[1][2])
@@ -993,5 +993,171 @@ b = 4
 # S = S.replace('pl', 'pamal')
 # print(S)
 
-print('That is %d %s bird!' % (1, 'dead'))
-print('That is {0}{1} bird!'.format(1, 'dead'))
+# print('That is %d %s bird!' % (1, 'dead'))
+# print('That is {0}{1} bird!'.format(1, 'dead'))
+
+# S = 'spam'
+# result = S.find('pa')
+# print(result)
+
+# S = 'spammy'
+# S = S[:3] + 'xx' + S[5:]
+# print(S)
+
+# S = 'spammy'
+# S = S.replace('mm', 'xx')
+# print(S)
+
+# S = 'spammymm'
+# S = S.replace('mm', 'xx')
+# print(S)
+
+# S = 'xxxxSPAMxxxxSPAMxxxx'
+# where = S.find('SPAM')
+# print(where)
+# S = S[:where] + 'EGGS' + S[(where+4):]
+# print(S)
+
+# S = 'spammy'
+# L = list(S)
+# print(L)
+
+# L[3] = 'x'
+# L[4] = 'x'
+# print(L)
+
+# S = ''.join(L)
+# print(S)
+
+# line = 'aaa bbb ccc'
+# col1 = line[0:3]
+# col3 = line[8:]
+# print(col1)
+# print(col3)
+
+# cols = line.split()
+# print(cols)
+
+# line = 'bob,hacker,40'
+# print(line.split(','))
+
+# line = "i'mSPAMaSPAMlumberjack"
+# print(line.split("SPAM"))
+# line = ' '.join(line.split("SPAM"))
+# print(line)
+
+# line = "The knights who say Ni!\n"
+# print(line.rstrip())
+# print(line.upper())
+# print(line.isalpha())
+# print(line.endswith('Ni!\n'))
+# print(line.startswith('The'))
+
+# print(line.find('Ni') != -1)
+# print('Ni' in line)
+# sub = 'Ni!\n'
+# print(line.endswith(sub))
+# print(line[-len(sub):] == sub)
+
+# exclamation = 'Ni'
+# print('The knights who say %s!' % exclamation)
+# print('%d %s %g you' % (1, 'spam', 4.0))
+# print('%s -- %s -- %s' % (42, 3.14159, [1, 2, 3]))
+# print('%(qty)d more %(food)s' % {'qty' : 1, 'food': 'spam'})
+
+# reply = """
+# Greetings...
+# Hello %(name)s
+# Your age is %(age)s
+# """
+
+# values = {'name': 'Bob', 'age': 40}
+# print(reply % values)
+
+# food = 'spam'
+# qty = 10
+# print(vars())
+
+# template = '{0}, {1} and {2}'
+# print(template.format('spam', 'ham', 'eggs'))
+
+# template = '{motto}, {pork} and {food}'
+# print(template.format(motto='spam', pork='ham', food='eggs'))
+
+# template = '{motto}, {0} and {food}'
+# print(template.format('ham', motto = 'spam', food = 'eggs'))
+
+# template = '{}, {} and {}'
+# print(template.format('spam', 'ham', 'eggs'))
+
+# template = '%s, %s and %s'
+# print(template % ('spam', 'ham', 'eggs'))
+
+# template = '%(motto)s, %(pork)s and %(food)s'
+# print(template % dict(motto='spam', pork = 'ham', food = 'eggs'))
+
+# X = '{motto}, {0} and {food}'.format(42, motto= 3.14, food= [1, 2])
+# print(X)
+
+# print(X.split(' and' ))
+# Y = X.replace('and', 'but under no circumstances')
+# print(Y)
+
+# import sys
+# print('My {1[kind]} runs {0.platform}'.format(sys, {'kind': 'laptop'}))
+# print('My {map[kind]} runs {sys.platform}'.format(sys=sys, map={'kind': 'laptop'}))
+
+# somelist = list('SPAM')
+# print(somelist)
+# print('first={0[0]}, third={0[2]}'.format(somelist))
+# print('first={0}, last={1}'.format(somelist[0], somelist[-1]))
+# print('first={0}, last={1}'.format(somelist, somelist[-1]))
+# parts = somelist[0], somelist[-1], somelist[1:3]
+# print(parts)
+# print('first={0}, last={1}, middle={2}'.format(*parts))
+
+# print('{0:10} = {1:10}'.format('spam', 123.4567))
+# print('{0:>10} = {1:<10}'.format('spam', 123.4567))
+# print('{.platform:>10} = {[kind]:<10}'.format(sys,dict(kind='laptop')))
+
+# print('{0:e}, {1:.3e}, {2:g}'.format(3.14159, 3.14159, 3.14159))
+# print('{0:f}, {1:.2f}, {2:06.2f}'.format(3.14159, 3.14159, 3.14159))
+# print('{0:X}, {1:b}, {2:o}'.format(3,5, 1))
+# print('{0:X}, {1:o}, {2:b}'.format(255, 255, 255))
+
+# print(bin(255), int('11111111', 2), 0b11111111)
+# print(hex(255), int('FF', 16), 0xFF)
+# print(oct(255), int('377', 8), 0o377)
+
+# print('{0:.2f}'.format(1 / 3.0))
+# print('%.2f' % (1 /30))
+
+# print('{0:.{1}f}'.format(1 / 3.0, 4))
+# print('%.*f' % (4, 1 / 3.0))
+
+# print('{0:.2f}'.format(1.2345))
+# print(format(1.2345, '.2f'))
+# print('%.2f' % 1.2345)
+
+# print("%s, %s and %s" % (3.14, 42, [1, 2]))
+# print('My %(kind)s runs %(platform)s' % {'kind' : 'laptop', 'platform': sys.platform})
+# print('My %(kind)s runs %(platform)s' % dict(kind='laptop', platform=sys.platform))
+# somelist = list('SPAM')
+# parts = somelist[0], somelist[-1], somelist[1:3]
+# print('first=%s, last=%s, middle=%s' % parts)
+
+# data = dict(platform= sys.platform, kind='laptop')
+# print('My {kind:<8} runs {platform:>8}'.format(**data))
+# print('My %(kind)-8s runs %(platform)8s' % data)
+
+# print('{0:b}'.format((2 ** 16) - 1))
+# # print('%b' % ((2 ** 16) - 1))       #error
+# print(bin((2 ** 16 - 1)))
+# print('%s' % bin((2 ** 16) - 1))
+# print('{}'.format(bin((2 ** 16) - 1)))
+# print('%s' % bin((2 ** 16) - 1)[2:])
+
+D = dict(name= 'Bob', job= 'dev')
+print('{0[name]} {0[job]} {0[name]}'.format(D))
+print('{name} {job} {name}'.format(**D))
+print('%(name)s %(job)s %(name)s' % D)
