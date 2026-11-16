@@ -1160,4 +1160,6 @@ b = 4
 D = dict(name= 'Bob', job= 'dev')
 print('{0[name]} {0[job]} {0[name]}'.format(D))
 print('{name} {job} {name}'.format(**D))
-print('%(name)s %(job)s %(name)s' % D)
+print('%(name)s %(job)s %(name)s' % D) 
+
+267
