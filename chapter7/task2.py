@@ -11,3 +11,4 @@ print(s[len(s) - 1], s[-1])
 print(s[s.find("cde"): s.find("cde")+3])
 print(s[::-1])
 print(s[::2])
+
