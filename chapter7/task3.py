@@ -12,8 +12,9 @@ print(s)
 print(s.upper())
 print(s.lower())
 
-s = s[0:s.find("World")] + "Python" 
-print(s)
+print(s.replace("World", "Python"))
 
+
+s = s.replace("!", "").replace(",", "")
 s = s.split()
 print(s)
