@@ -1157,9 +1157,228 @@ b = 4
 # print('{}'.format(bin((2 ** 16) - 1)))
 # print('%s' % bin((2 ** 16) - 1)[2:])
 
-D = dict(name= 'Bob', job= 'dev')
-print('{0[name]} {0[job]} {0[name]}'.format(D))
-print('{name} {job} {name}'.format(**D))
-print('%(name)s %(job)s %(name)s' % D) 
+# D = dict(name= 'Bob', job= 'dev')
+# print('{0[name]} {0[job]} {0[name]}'.format(D))
+# print('{name} {job} {name}'.format(**D))
+# print('%(name)s %(job)s %(name)s' % D) 
 
-267
+#----------------------------------------------
+# print(len([1, 2, 3]))
+# print([1, 2, 3] + [4, 5, 6])
+# print(['Ni!'] * 4)
+
+# print(str([1, 2]) + '34')
+# print([1, 2] + list("34"))
+# #print([1, 2] + 34)          #error
+# print([1, 2] + ["34"])
+
+# print(3 in [1, 2, 3])
+# for x in [1, 2, 3]:
+#     print(x, end=' ')
+
+# res = [c * 4 for c in 'SPAM']
+# print(res)
+
+# res = []
+# for c in 'SPAM':
+#         res.append(c * 4)
+# print(res)
+
+# print(list(map(abs, [-1, -2, 0, 1, 2])))
+
+# L = ['spam', 'Spam', 'SPAM!']
+# print(L[2])
+# print(L[-2])
+# print(L[1:])
+
+# L = ['spam', 'Spam', 'SPAM!']
+# L[1] = 'eggs' 
+# print(L)
+# L[0:2] = ['eat', 'more']
+# print(L)
+# L[0:4] = ['spam', 'SPAM']
+# print(L)
+
+# L = [1, 2, 3]
+# L[1:2] = [4,5]  #замена\вставка
+# print(L)
+
+# L[1:1] = [6,7]  #вставка
+# print(L)
+
+# L[1:2] = []     #удаление
+# print(L)
+
+# L = [1]
+# L[:0] = [2, 3, 4]
+# print(L)
+
+# L[len(L):] = [5, 6, 7]
+# print(L)
+
+# L.extend([8, 9, 10])
+# print(L)
+
+# L = ['eat', 'more', 'SPAM']
+# L.append('please')
+# print(L)
+# L.sort()
+# print(L)
+# L.append(['please', 'lol'])
+# print(L)
+# print(L[len(L) - 1][1])
+
+# L = ['abc', 'ABD', 'aBe']
+# L.sort()
+# print(L)
+
+# L = ['abc', 'ABD', 'aBe']
+# L.sort(key=str.lower)
+# print(L)
+
+# L.sort(key=str.lower, reverse=True)
+# print(L)
+
+# L = ['spam', 'eggs', 'ham']
+# print(L.index('eggs'))
+# L.insert(1, 'toast')
+# print(L)
+# L.remove('eggs')
+# print(L)
+# print(L.pop(1))
+# print(L)
+# print(L.count('spam'))
+
+# L = ['spam', 'eggs', 'ham', 'toast']
+# del L[0]
+# print(L)
+# del L[1:]
+# print(L)
+
+#--------------------------------------------------------
+# D = {'spam' : 2, 'ham' : 1, 'eggs' : 3}
+# # print(D['spam'])
+# # print(D)
+
+# # print(len(D))
+# # print('ham' in D)
+# # print(list(D.keys()))
+
+# D['ham'] = ['grill', 'bake', 'fry']
+# print(D)
+# del D['eggs']
+# print(D)
+# D['brunch'] = 'Bacon'
+# print(D)
+# D = {'spam' : 2, 'ham' : 1, 'eggs' : 3}
+# print(list(D.values()))
+# print(list(D.items()))
+# print(list(D))
+
+# print(D.get('spam'))
+# print(D.get('spams'))
+# print(D.get('toast', 88))
+
+# print(D)
+# D = {'spam' : 2, 'ham' : 1, 'eggs' : 3}
+# D2 = {'toast': 4, 'muffin':5, 'eggs':10}
+# D.update(D2)
+# print(D)
+
+# print(D.pop('muffin'))
+# print(D)
+
+# table = {'1975': 'Holy Grail',
+#          '1979': 'Life of Brian',
+#          '1983': 'The Meaning of Life'}
+
+# year = '1983'
+# movie = table[year]
+# print(movie)
+
+# for year in table:
+#     print(year + '\t' + table[year])
+
+
+# table = {'Holy Grail': '1975',
+#          'Life of Brian': '1979',
+#          'The Meaning of Life': '1983'}
+
+# print(list(table.items()))
+# print([title for (title, year) in table.items() if year == '1975'])
+# Matrix = {}
+# Matrix[(2,3,6)] = 10 
+# if(2, 3, 6) in Matrix:
+#         print(Matrix[(2, 3, 6)])
+# else:
+#     print(0)
+
+# try:
+#     print(Matrix[(2, 3, 6)])
+# except KeyError:
+#      print(0)
+
+# print(Matrix.get((2, 3, 4), 0))
+# print(Matrix.get((2, 3, 6), 0))
+
+# rec = {}
+# rec['name'] = 'Bob'
+# rec['age'] = 40.5
+# rec['job'] = 'developer/manager'
+# print(rec['name'])
+
+# print(list(zip(['a', 'b', 'c'] , [1, 2, 3])))
+# a = list(zip(['a', 'b', 'c'] , [1, 2, 3]))
+# print(a)
+# print(a[1])
+# D = dict(zip(['a', 'b', 'c'], [1, 2, 3]))
+# print(D)
+
+# D = {k: v for (k, v) in zip(['a', 'b', 'c'], [1,2,3])}
+# print(D)
+
+# D = {x: x ** 2 for x in [1, 2, 3, 4]}
+# print(D)
+
+# D= {c: c* 4 for c in 'SPAM'}
+# print(D)
+
+# D = {c.lower(): c + '!' for c in['SPAM', 'EGGS', 'HAM']}
+# print(D)
+
+# D = dict.fromkeys(['a', 'b', 'c'], 0)
+# print(D)
+# D = {k:0 for k in['a', 'b', 'c']}
+# print(D)
+# D = dict.fromkeys('spam')
+# print(D)
+
+# D = {'a' : 1, 'b' : 2, 'c' : 3}
+# # print(D)
+# K = D.keys()
+# V = D.values()
+# # print(list(K))
+# # print(list(V))
+# del D['b']
+# # print(D)
+# # print(list(K))
+# # print(list(V))
+
+# print(K, V)
+
+# print(K | {'x' : 4})
+# #print(V & {'x' : 4}.values()) #error
+
+# D = {'a': 1, 'b' : 2, 'c' : 3}
+# print(D.keys() & D.keys())
+# print(D.keys() & {'b'})
+# print(D.keys() & {'b': 1})
+# print(D.keys() | {'b', 'c', 'd'})
+
+D = {'a' : 1}
+print(D)
+print(list(D.items()))
+print(D.items() | D.keys())
+print(D.items() | D)
+print(D.items() | {('c', 3), ('d', 4)})
+print(dict(D.items() | {('c' , 3) , ('d', 4)}))
