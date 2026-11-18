@@ -1375,10 +1375,156 @@ b = 4
 # print(D.keys() & {'b': 1})
 # print(D.keys() | {'b', 'c', 'd'})
 
-D = {'a' : 1}
-print(D)
-print(list(D.items()))
-print(D.items() | D.keys())
-print(D.items() | D)
-print(D.items() | {('c', 3), ('d', 4)})
-print(dict(D.items() | {('c' , 3) , ('d', 4)}))
+# D = {'a' : 1}
+# print(D)
+# print(list(D.items()))
+# print(D.items() | D.keys())
+# print(D.items() | D)
+# print(D.items() | {('c', 3), ('d', 4)})
+# print(dict(D.items() | {('c' , 3) , ('d', 4)}))
+
+#-------------------------------------------------------
+# print((1, 2) + (3, 4))
+# print((1, 2) * 4)
+# T = (1, 2, 3, 4)
+# print(T[0], T[1:3])
+
+# x = (40) # целое число
+# x = (40,) #кортеж
+
+# T = ('cc', 'aa', 'dd', 'bb')
+# tmp = list(T)
+# tmp.sort()
+# print(tmp)
+# T = tuple(tmp)
+# print(T)
+# T = ('cc', 'aa', 'dd', 'bb')
+# print(T)
+# print(sorted(T))
+# T = sorted(T)
+# print(T)
+# T = (1, 2, 3, 4, 5)
+# L = [x + 20 for x in T]
+# print(L) 
+
+# T  = (1, 2, 3, 2, 4, 2)
+# print(T.index(2))
+# print(T.count(2))
+
+# T = (1, [2, 3], 4)
+# T[1][0] = 'spam'
+# print(T)
+
+# bob = ('Bob', 40.5, ['dev', 'mgr'])
+# print(bob)
+# print(bob[0], bob[2], bob[2][0])
+# from collections import namedtuple
+# Rec = namedtuple('Rec1', ['name', 'age', 'jobs'])
+# bob = Rec('Bob', age = 40.5, jobs=['dev', 'mgr'])
+# print(bob)
+# print(bob[0], bob[2])
+# print(bob.name, bob.jobs)
+
+# O = bob._asdict()
+# print(O['name'], O['jobs'])
+
+# bob = {'name': 'Bob', 'age' : 40.5, 'jobs': ['dev', 'mgr']}
+# job, name, age = bob.values()
+# print(name, job)
+
+#-----------------------------------
+# mygile = open('myfile.txt', 'w')
+# print(mygile.write('hello text file\n'))
+# print(mygile.write('goodbye text file\n'))
+# mygile.close()
+# myfile = open('myfile.txt')
+# print(myfile.readline())
+# print(myfile.readline())
+# print(myfile.readline())
+
+# print(open('myfile.txt').read())
+
+# for line in open('myfile.txt'):
+#     print(line, end='')
+
+# X, Y, Z = 43, 44, 45
+# S = 'Spam'
+# D = {'a':1, 'b':2}
+# L = [1, 2, 3]
+# F = open('datafile.txt', 'w')
+# F.write(S + '\n')
+# F.write('%s, %s, %s\n' % (X, Y, Z))
+# F.write(str(L) + '$' + str(D) + '\n')
+# F.close()
+
+# chars = open('datafile.txt').read()
+# print(chars)
+
+# F = open('datafile.txt')
+# line = F.readline()
+# print(line.rstrip())
+
+# line = F.readline()
+# parts = line.split(',')
+# print(parts)
+
+# numbers = [int(P) for P in parts]
+# print(numbers)
+
+# for x in parts:
+#     print(int(x) + 2)
+
+# line = F.readline()
+# print(line)
+# parts = line.split('$')
+# print(parts)
+# print(eval(parts[0]))
+# objects = [eval(P) for P in parts]
+# print(objects)
+
+
+# D = {'a': 1, 'b': 2}
+# F = open('datafile.pkl', 'wb')
+# import pickle
+# pickle.dump(D, F)
+# F.close()
+
+# F = open('datafile.pkl', 'rb')
+# E = pickle.load(F)
+# print(E)
+
+# name = dict(first='Bob', last = 'Smith')
+# rec = dict(name = name, job=['dev', 'mgr'], age=40.5)
+# print(rec)
+# import json
+# print(json.dumps(rec))
+# json.dump(rec, fp=open('testjson.txt', 'w'), indent=4)
+# print(open('testjson.txt').read())
+# P = json.load(open('testjson.txt'))
+# print(P)
+
+# F = open('data.bin', 'wb')
+# import struct
+# data = struct.pack('>i4sh', 7, b'spam', 8)
+# print(data)
+# F.write(data)
+# F.close()
+
+# F = open('data.bin', 'rb')
+# data = F.read()
+# print(data)
+# values = struct.unpack('<i4sh', data)
+# print(values)
+
+# L = [4, 5, 6]
+# X = L * 4
+# Y = [L] * 4
+# print(X)
+# print(Y)
+# L[1] = 0
+# print(X)
+# print(Y)
+
+
+
+
