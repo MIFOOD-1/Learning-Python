@@ -1525,6 +1525,206 @@ b = 4
 # print(X)
 # print(Y)
 
+#-----------------------------------------
+# while True:
+#     reply = input('Enter text:')
+#     if reply == 'stop' : break
+#     print(reply.upper())
+
+# while True:
+#     reply = input('Enter text:')
+#     if reply == 'stop' : break
+#     print(int(reply) ** 2)
+# print('Bye')
+
+# S = '123'
+# T = 'txt'
+# print(S.isdigit(), T.isdigit())
+
+# while True:
+#     reply = input('Enter text: ')
+#     if reply == 'stop':
+#         break
+#     elif not reply.isdigit():
+#         print('Bad' * 8)
+#     else:
+#         print(int(reply) ** 2)
+# print('Bye')
+
+# while True:
+#     reply = input('Enter text: ')
+#     if reply == 'stop': break
+#     try:
+#         num = int(reply)
+#     except:
+#         print('Bad!' * 8)
+#     else:
+#         print(num ** 2)
+# print('Bye')
+
+# while True:
+#     reply = input("Enter text: ")
+#     if reply == 'stop':
+#         break
+#     elif not reply.isdigit():
+#         print('Bad!' * 8)
+#     else:
+#         num = int(reply)
+#         if num < 20:
+#             print('low')
+#         else:
+#             print(num ** 2)
+# print('Bye')
+
+#--------------------------------
+# nudge = 1
+# wink = 2
+# A, B = nudge, wink
+# print(A, B)
+# [C, D] = [nudge, wink]
+# print(C, D)
+
+# nudge = 1
+# wink = 2
+# nudge, wink = wink, nudge
+# print(nudge, wink)
+
+# L = [1, 2, 3, 4]
+# while L:
+#         front, L = L[0], L[1:]
+#         print(front, L)
+
+seq = [1, 2, 3, 4]
+# a, b, c, d = seq
+# print(a, b, c, d)
+# #a, b = seq              #error
+# a, *b = seq
+# print(a)
+# print(b)
+
+# *a, b = seq
+# print(a)
+# print(b)
+
+# a, *b, c = seq
+# print(a)
+# print(b)
+# print(c)
+
+# a, *b, c, d = seq
+# print(a)
+# print(b)
+# print(c)
+# print(d)
+
+# a, *b, = 'spam'
+# print(a, b)
+
+# a, *b, c = 'spam'
+# print(a, b, c)
+
+# S = 'spam'
+# print(S[0], S[1:])
+# print(S[0], S[1:3], S[3])
+
+# L = [1, 2, 3, 4]
+# while L:
+#     front, *L = L
+#     print(front, L)
+
+# seq = [1, 2, 3, 4]
+# a, *b = seq
+# print(a,b)
+
+# a, b = seq[0], seq[1:]
+# print(a,b)
+
+# *a, b = seq
+# print(a, b)
+
+# a,b  = seq[:-1], seq[-1]
+# print(a,b)
+
+# for(a, *b, c) in [(1, 2, 3, 4), (5, 6, 7, 8)]:
+#     print(a, b, c)
+
+#---------------------------------------------------
+# a = b = c = 'spam'
+# print(a,b,c)
+
+# a = b = []
+# b.append(42)
+# print(a, b)
+
+# L = [1, 2]
+# L = L + [3]
+# print(L)
+# L.append(4)
+# print(L)
+# L = L + [5, 6]
+# print(L)
+# L.extend([7, 8])
+# print(L)
+# L += [9,10]
+# print(L)
+
+# L = [1, 2]
+# M = L
+# L = L + [3,4]
+# print(L)
+# print(M)
+
+# L = [1,2]
+# M = L
+# L += [3,4]
+# print(L)
+# print(M)
+
+#-------------------------------------------------------------------------------------------
+# print([object, ...][, sep=' '][, end='\n'][,file=sys.stdout][, flush=False])
+
+# print()
+
+# x = 'spam'
+# y = 99
+# z = ['eggs']
+# print(x, y, z)
+
+# print()
+# print(x, y, z, sep='')
+# print(x, y, z, sep=', ')
+
+# print()
+# print(x, y, z, end='')
+# print(x, y, z, end=''); print(x, y, z)
+# print(x, y, z, end='hahaha\n')
+
+# print(x, y, z, end='', sep='   \n     ')
+
+# print(x, y, z, sep='   ', file=open('data.txt', 'w'))
+# print(x, y, z)
+# print(open('data.txt').read())
 
 
+# text = '%s: %-.4f, %05d' % ('Result', 3.14159, 42)
+# print(text)
+# print('%s: %-.4f, %05d' % ('Result', 3.14159, 42))
+
+
+# import sys
+# sys.stdout.write('hello world\n')
+
+# import sys
+# temp = sys.stdout
+# sys.stdout = open('log.txt', 'a')
+# print('spam')
+# print(1, 2, 3, end= '')
+# sys.stdout.close()
+# sys.stdout = temp
+
+# print('bback here')
+# print(open('log.txt').read())
+
+import sys
+sys.stderr.write(('Bad!' * 8) + '\n')
 
