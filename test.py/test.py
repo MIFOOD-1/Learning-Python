@@ -1594,7 +1594,7 @@ b = 4
 #         front, L = L[0], L[1:]
 #         print(front, L)
 
-seq = [1, 2, 3, 4]
+# seq = [1, 2, 3, 4]
 # a, b, c, d = seq
 # print(a, b, c, d)
 # #a, b = seq              #error
@@ -1766,8 +1766,248 @@ seq = [1, 2, 3, 4]
 # print(['f', 't'][bool('')])
 # print(['f', 't'][bool(' ')])
 
-L = [1, 0, 2, 0, 'spam', '', 'ham', []]
-print(list(filter(bool, L)))
+# L = [1, 0, 2, 0, 'spam', '', 'ham', []]
+# print(list(filter(bool, L)))
 
-print([x for x in L if x])
-print(any(L), all(L))
+# print([x for x in L if x])
+# print(any(L), all(L))
+
+#------------------------------------------------------------------------------
+
+# x = 'spam'
+# while x:
+#     print(x, end=' ')
+#     x = x[1:]
+
+# x = 'spam'
+# while x:
+#     p = x[0]
+#     x = x[1:]
+#     print(p, end='')
+    
+# a = 0; b = 10
+# while a < b:
+#     print(a, end=' ')
+#     a += 1
+
+# x = 10
+# while x:
+#     x = x - 1
+#     if x % 2 != 0: continue
+#     print(x, end=' ')
+
+
+# while True:
+#     name = input('Enter name: ')
+#     if name == 'stop': break
+#     age = input('Enter age: ')
+#     print('Hello', name, '=>', float(age) ** 2)
+
+# for x in ['spam', 'eggs', 'ham']:
+#     print(x, end=' ')
+
+# sum = 0
+# for x in [1, 2, 3, 4]:
+#     sum = sum + x
+# print(sum)
+
+# prod = 1
+# for item in [1, 2 ,3 ,4]: prod *= item; print(prod)
+
+# S = 'lumberjack'
+# T = ('and', 'I"M', 'okay')
+# for x in S :(print(x, end=' '))
+# for x in T: print(x, end =' ')
+
+# T = [(1, 2), (3, 4), (5, 6)]
+# for(a, b) in T:
+#     print(a, b)
+
+# T = [(1, 2), (3, 4), (5, 6)]
+# for x in T:
+#     print(x)
+
+# D = {'a' : 1, 'b': 2, 'c': 3}
+# # for key in D:
+# #     print(key, '=>', D[key])
+
+# D = {'a' : 1, 'b': 2, 'c': 3}
+# for (key, key2) in D.items():
+#     print(key, '=>', key2)
+
+# # list(D.items())
+# # print(D)
+# # print(D.items())
+# # for(key, value) in D.items():
+# #     print(key, '=>', value)
+
+# ((a, b), c) = ((1, 2), 3)
+# print(a,b,c)
+# for ((a, b,), c) in [((1, 2), 3), ((4, 5), 6)]: print(a,b,c)
+
+# for x in ['spam', 'eggs', 'ham']:
+#     print(x, end=' ')
+
+# for ((a, b), c) in [([1, 2], 3), ['XY', 6]]: print(a, b, c)
+# for ((a, *b), c) in [([1, 2], 3), ['X', 6]]: print(a, b, c)
+
+# a, b, c = (1, 2 ,3)
+# print(a, b, c)
+
+# for (a, b, c) in [(1, 2, 3), (4, 5, 6)]: print(a, b, c)
+# for (a, b, c) in (1, 2, 3), (4, 5, 6): print(a, b, c)
+
+# for (a, *b, c) in [(1, 2, 3, 4), (5, 6, 7, 8)]: print(a, b, c)
+# for a, *b, c in [(1, 2, 3, 4), (5, 6, 7, 8)]: print(a, b, c)
+
+# for all in [(1, 2, 3, 4), (5, 6, 7, 8)]:
+#     a, b, c = all[0], all[1:3], all[3]
+#     print(a,b,c)
+
+# for a, b, *c in [[1, 2, 3, 5, 6, 7]]:
+#    print(a,b,c)
+
+#--------------------------------------------------------------------
+# items = ["aaa", 111, (4, 5), 2.01]
+# tests = [(4, 5), 3.14]
+
+# for key in tests:
+#     for item in items:
+#         if item == key:
+#             print(key, 'was found')
+#             break
+#     else:
+#         print(key, "not found")
+
+# for key in tests:
+#     if key in items:
+#         print(key, "was found")
+#     else:
+#         print(key, 'not found')
+
+# if tests[0] in items:
+#     print('found')
+# else:
+#     print('not found')
+
+
+# seq1 = 'spam'
+# seq2 = 'scam'
+
+# res = []
+# for x in seq1:
+#     if x in seq2:
+#         res.append(x)
+# print(res)
+
+
+# [x for x in seq1 if seq2]
+
+#------------------------------------------------------------
+# print(list(range(5)))
+# print(list(range(2, 5)))
+# print(list(range(0, 10, 2)))
+# print(list(range(-5, 5)))
+# print(list(range(5, -5, -1)))
+# print(list(range(5, -5)))
+# print(list(range(5, -5, -2)))
+
+# for i in range(3):
+#     print(i, 'Pythons')
+# for i in list(range(3)):
+#     print(i, 'Pythons')
+
+# X = 'spam'
+# for i in range(len(X)): print(X[i], end=' ')
+
+# S = 'abcdefghijk'
+# list(range(0, len(S), 2))
+# for i in range(0, len(S), 2): print(S[i], end=' ')
+
+# S = 'abcdefghijk'
+# for c in S[::2]: print(c, end=' ')
+# print('\n',c)
+
+# L = [1, 2, 3, 4, 5]
+# for i in range(len(L)):
+#     L[i] += 1
+# else:
+#     print(L)
+
+# L1 = [1,2,3,4]
+# L2 = [5,6,7,8]
+# print(list(zip(L1, L2)))
+# for(x, y) in zip(L1, L2):
+#     print(x, y, '--', x+y)
+# for x in zip(L1, L2):
+#     print(x, '--', x[0] + x[1])
+
+# T1, T2, T3 = (1,2,3), (4,5,6), (7,8,9)
+# print(T3)
+# print(list(zip(T1,T2, T3)))
+
+# S1 = 'abc'
+# S2 = 'xyz123'
+# print(list(zip(S1, S2)))
+
+# print(list(map(ord, 'spam')))
+
+# res = []
+# for c in 'spam': res.append(ord(c))
+# print(res)
+
+#---------------------------------------------------------------------------
+
+# D1 = {'spam': 1, 'eggs':3, 'toast': 5}
+# print(D1)
+
+# D1 = {}
+# D1['spam'] = 1
+# D1['eggs'] = 3
+# D1['toast'] = 5
+
+# keys = D1.keys()
+# vals = D1.values()
+
+# keys = ['spam', 'eggs', 'toast']
+# vals = [1, 3, 5]
+
+# print(list(zip(keys, vals)))
+
+# D2 = {}
+# for(k,v) in zip(keys, vals): 
+#     D2[k] = v
+#     print(D2)
+# print(D2)
+
+# D3 = dict(zip(keys, vals))
+# print(D3)
+# {k: v for (k, v) in zip(keys, vals)}
+
+#-------------------------------------------------------------------------
+# S = 'spam'
+# offset = 0
+# for item in S:
+#     print(item, 'appears at offser', offset)
+#     offset += 1
+
+# S = 'spam'
+# for (offset, item) in enumerate(S):
+#     print(item, 'appears at offset', offset)
+
+# print(tuple(enumerate(S)))
+
+# E = enumerate(S)
+# print(next(E))
+# print(next(E))
+# print(next(E))
+# print(next(E))
+# print(S)
+
+# [c * i for (i,c) in enumerate(S)]
+
+# for(i, l) in enumerate(open('test.txt')):
+#     print('%s) %s' % (i, l.strip()))
+
+
+
