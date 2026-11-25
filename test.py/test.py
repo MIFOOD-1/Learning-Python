@@ -2226,29 +2226,64 @@ b = 4
 # print(M)
 # print([x for x in ['spam' , '' , 'ni' ] if x])
 
-Z = zip((1, 2, 3), (10, 11, 12))
-I1 = iter(Z)
-I2 = iter(Z)
-print(Z)
-print(I1)
-print(I2)
+# Z = zip((1, 2, 3), (10, 11, 12))
+# I1 = iter(Z)
+# I2 = iter(Z)
+# print(Z)
+# print(I1)
+# print(I2)
 
-print(next(Z))
-print(next(I1))
-print(next(I2))
-
-M = map(abs, (-1, 0, 1))
-I1 = iter(M); I2 = iter(M)
-print(next(I1), next(I1), next(I1))
+# print(next(Z))
+# print(next(I1))
 # print(next(I2))
 
-M = map(abs, (-1, 0, 1))
-I1 = iter(M); I2 = iter(M)
+# M = map(abs, (-1, 0, 1))
+# I1 = iter(M); I2 = iter(M)
+# print(next(I1), next(I1), next(I1))
+# # print(next(I2))
 
-for x in M: print(x)
-for x in I1: print(x)       #я как понимаю потому м и так является итераторм потому ай1 и ай2 просто ссылки на него 
+# M = map(abs, (-1, 0, 1))
+# I1 = iter(M); I2 = iter(M)
+
+# for x in M: print(x)
+# for x in I1: print(x)       #я как понимаю потому м и так является итераторм потому ай1 и ай2 просто ссылки на него 
 
 
+# with open('file.txt', encoding='utf-8') as f:
+#     for line in f:
+#         print(line, end='')
 
+#--------------------------------------------------------------------
 
+# import sys
+# print(dir(sys))
+# print(len(dir(sys)))
+# print(len([x for x in dir(sys) if not x.startswith('__')]))
 
+# print(dir([]))
+# print(dir(''))
+
+# print(len(dir([])),len([x for x in dir([]) if not x.startswith('__')]))
+# print(len(dir('')),len([x for x in dir('') if not x.startswith('__')]))
+
+# print([a for a in dir(list) if not a.startswith('__')])
+# print([a for a in dir(dict) if not a.startswith('__')])
+
+# def dir1(x) : return [a for a in dir(x) if not a.startswith('__')]
+# print(dir1(tuple))
+# print(dir(str) == dir(''))
+# print(dir(list) == dir([]))
+# print(list() == [])
+
+# import sys
+# print(sys.__doc__)
+# print(sys.getrefcount.__doc__)
+# print(int.__doc__)
+# print(map.__doc__)
+
+# import sys
+# print(help(sys.getrefcount))
+# print(help(dict))
+# print(help(str.replace))
+# print(help(''.replace))
+# print(help(ord))
