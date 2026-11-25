@@ -2010,4 +2010,245 @@ b = 4
 #     print('%s) %s' % (i, l.strip()))
 
 
+# print(open('script2.py').read())
+
+# f = open('script2.py')
+# print(f.readline())
+# print(f.readline())
+# print(f.readline())
+# print(f.readline())
+
+# f = open('script2.py')
+# print(f.__next__(), end=' ')
+# print(f.__next__(), end=' ')
+# print(f.__next__(), end=' ')
+# print(f.__next__(), end=' ')
+# print(f.__next__(), end=' ')
+
+# for line in open('script2.py'):
+#     print(line.upper(), end='')
+
+# f = open('script2.py')
+# while True:
+#     line = f.readline()
+#     if not line: break
+#     print(line.upper(), end='')
+
+# f = open('script2.py')
+# print(f.__next__())
+# print(f.__next__())
+
+# f = open('script2.py')
+# print(next(f))
+# print(next(f))
+
+# L = [1, 2, 3]
+# I = iter(L)
+# print(I.__next__())
+# print(I.__next__())
+# print(I.__next__())
+# print(I.__next__())
+
+# L = [1, 2, 3]
+# for X in L:
+#     print(X ** 2, end=' ')
+
+# I = iter(L)
+# while True:
+#     try:
+#         X = next(I)
+#     except StopIteration:
+#         break
+#     print(X ** 2, end=' ')
+
+# D = {'a' : 1, 'b' : 2, 'c' : 3}
+# for key in D.keys():
+#     print(key, D[key])
+
+# I = iter(D)
+# # print(next(I))
+# # print(next(I))
+# print(next(I))
+# print(next(I))
+
+
+# for key in D:
+#     print(key, D[key])
+
+# R = range(5)
+# print(R)
+
+# I = iter(R)
+# print(next(I))
+# print(next(I))
+
+# print(list(range(5)))
+
+#--------------------------------------------
+# L = [1, 2, 3, 4, 5]
+# for i in range(len(L)):
+#     L[i] += 10
+# print(L)
+
+# L = [x + 10 for x in L]
+# print(L)
+# L = {x + 10 for x in L}
+# print(L)
+
+# f = open('script2.py')
+# lines = f.readlines()
+# print(lines)
+
+# lines = [line.rstrip() for line in lines]
+# print(lines)
+
+# lines = [line.upper() for line in lines]
+# print(lines)
+
+# lines = [line.split() for line in lines]
+# print(lines)
+
+#---------------------------------------------------------
+
+# lines = [line.rstrip() for line in open('script2.py') if line[0] == 'p']
+# print(lines)
+
+# res = []
+# for line in open('script2.py'):
+#     if line[0] == 'p':
+#         res.append(line.rstrip())
+# print(res)
+
+# line = [line.rstrip() for line in open('script2.py') if line.rstrip()[-1].isdigit()]
+# print(line)
+
+# print([x + y for x in 'abc' for y in 'lmn'])
+
+#-------------------------------------------------------
+
+# uppers = [line.upper() for line in open('script2.py')]
+# print(uppers)
+
+# print(map(str.upper, open('script2.py')))
+# print(list(map(str.upper, open('script2.py'))))
+
+# print(sorted(open('script2.py')))
+# print(list(zip(open('script2.py'), open('script2.py'))))
+# print(list(enumerate(open('script2.py'))))
+# print(list(filter(bool, open('script2.py'))))
+
+# import functools, operator
+# print(functools.reduce(operator.add, open('script2.py')))
+
+# print(list(open('script2.py')))
+# print(tuple(open('script2.py')))
+# print('...'.join(open('script2.py')))
+
+# a, b, c, d = open('script2.py')
+# print(a, d)
+
+# a, *d = open('script2.py')
+# print(a, d)
+
+# print('y = 2\n' in open('script2.py'))
+# print('x = 2\n' in open('script2.py'))
+
+# L =[11, 22, 33 ,44]
+# L[1:3] = open('script2.py')
+# print(L)
+
+# L = [11]
+# L.extend(open('script2.py'))
+
+# L = [11]
+# L.append(open('script2.py'))
+# print(L)
+# print(list(L[1]))
+
+# print(set(open('script2.py')))
+# print({line for line in open('script2.py')})
+# print({ix : line for ix, line in enumerate(open('script2.py'))})
+
+# print({line for line in open('script2.py') if line[0] == 'p'})
+# print({ix : line for ix, line in enumerate(open('script2.py')) if line[0] == 'p'})
+
+# def f (a, b, c, d): print(a, b, c, d, sep='&')
+# print(f(1, 2, 3, 4))
+# print(f(*[1, 2, 3, 4]))
+
+# X = (1, 2)
+# Y = (3, 4)
+
+# print(list(zip(X, Y)))
+# A, B = zip(*zip(X, Y))
+# print(A)
+# print(B)
+
+# R = range(10)
+# I = iter(R)
+# print(next(I))
+# print(next(I))
+# print(next(I))
+
+# print(R)
+# print(list(R))
+
+# M = map(abs, (-1, 0, 1))
+# print(M)
+
+# print(next(M))
+# print(next(M))
+# print(next(M))
+# # print(next(M))
+
+# for x in M: print(x)
+
+# M = map(abs, (-1, 0, 1))
+# for x in M: print(x)
+
+# print(list(map(abs, (-1, 0, 1))))
+
+# Z = zip((1, 2, 3), (10, 20, 30))
+# print(Z)
+# print(list(Z))
+
+# for pair in Z: print(pair)
+
+# Z = zip((1, 2, 3), (10, 20, 30))
+# for pair in Z: print(pair)
+
+
+# Z = zip((1, 2, 3), (10, 20, 30))
+# print(next(Z))
+
+# print(tuple(filter(bool, ['spam', '', 'ni'])))
+# M =  [x for x in ['spam', '', 'ni'] if bool (x)]
+# print(M)
+# print([x for x in ['spam' , '' , 'ni' ] if x])
+
+Z = zip((1, 2, 3), (10, 11, 12))
+I1 = iter(Z)
+I2 = iter(Z)
+print(Z)
+print(I1)
+print(I2)
+
+print(next(Z))
+print(next(I1))
+print(next(I2))
+
+M = map(abs, (-1, 0, 1))
+I1 = iter(M); I2 = iter(M)
+print(next(I1), next(I1), next(I1))
+# print(next(I2))
+
+M = map(abs, (-1, 0, 1))
+I1 = iter(M); I2 = iter(M)
+
+for x in M: print(x)
+for x in I1: print(x)       #я как понимаю потому м и так является итераторм потому ай1 и ай2 просто ссылки на него 
+
+
+
+
 
