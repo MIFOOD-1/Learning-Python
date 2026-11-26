@@ -14,7 +14,7 @@
 
 print("Input new object for translate on ASCII number or send 'stop'") 
 S = input()
-for x in S:
+while True:
     if S == "stop" : 
         break
     for x in S:
@@ -23,5 +23,18 @@ for x in S:
     S = input()
 print("end work")
 
+#проблема, я думал у него меняется изнчальное представление, 
+#однако что первым фор сохранил то и будет, из за чего цикл 
+#продолжится пока не пройдет по первому символу
+# print("Input new object for translate on ASCII number or send 'stop'")           
+# S = input()                                                                                 
+# for x in S:       
+#     if S == "stop" : 
+#         break
+#     for x in S:
+#         print("%s = ASCII: %d" %  (x, ord(x)))
+#     print("Input new object for translate on ASCII number or send 'stop'") 
+#     S = input()
+# print("end work")
 
 
