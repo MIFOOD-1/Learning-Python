@@ -53,3 +53,9 @@ for i, x in enumerate(L) :
       break
 else:
     print(X, 'not found')
+
+#ответ на вариант В
+if num in L:
+   print('at index', L.index(num))
+else:
+    print(X, 'not found')
