@@ -44,7 +44,7 @@
 # (см. главу 14)?
 
 
-L = [1, 2, 4, 8, 16, 32, 64]
+L = [2 ** x for x in range(7)]
 X = 5
 num = 2 ** X
 for i, x in enumerate(L) :
