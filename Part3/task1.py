@@ -14,14 +14,23 @@
 
 print("Input new object for translate on ASCII number or send 'stop'") 
 S = input()
+L = list()
 while True:
+    sum_simvol = 0
     if S == "stop" : 
         break
     for x in S:
         print("%s = ASCII: %d" %  (x, ord(x)))
+        sum_simvol += ord(x)
+        L.append(ord(x))
+    print("sum simvol ASCII:", sum_simvol)
     print("Input new object for translate on ASCII number or send 'stop'") 
     S = input()
+print("list: ", L)
 print("end work")
+
+
+
 
 #проблема, я думал у него меняется изнчальное представление, 
 #однако что первым фор сохранил то и будет, из за чего цикл 
